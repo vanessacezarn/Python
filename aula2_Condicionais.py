@@ -29,12 +29,23 @@ print('-------------------------')
 '''
 and(e), or(ou), not(não)
 and - todas as condições precisam ser verdadeiras
+or - se qualquer uma das condições for verdadeira toda a expressão envolvida com o operador lógico é dita verdadeira
+not(!) - inverter expressções ==> True vira False e False vira True
 '''
-entrada = input('Entrar ou Sair')
-senha=input('digite a senha')
-senhaV=123
+entrada = input('[E]ntrar ou [S]air? ')
+senha=input('digite a senha: ')
+senhaV = '123'
 
-if entrada == 'e' and senha == senhaV:
+if entrada == 'E' or entrada == 'e' and senha == senhaV:
     print('entrando no sistema')
 else:
-    print('sair do programa')
+    print('fim do programa')
+
+if senha != senhaV:
+    print('senha incorreta')
+
+#OPERADORES in E not in
+# verifica se algo esta ou não na string
+nome = 'vanessa'
+print('e' in nome)
+print('v'not in nome)
